@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://47.92.111.224:3306/rs_share?serverTimezone=GMT%2B8&useSSL=false&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: rsbfgkjlgvedfjkvg
+
+# 配置mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      # 该策略约定了如何产出注入的sql,涉及insert,update以及wrapper内部的entity属性生成的 where 条件（空字符串或空都将去掉）
+      insert-strategy: not_empty
+      update-strategy: not_empty
+      select-strategy: not_empty

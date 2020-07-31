@@ -1,4 +1,11 @@
 # 整合quartz
+## 简介
+实现了quartz的动态配置配置，但是还不支持携带参数的方法调用，下个版本考虑添加。
+
+**定义**
+
+quartz是用来构建定时作业任务的框架。
+
 quartz有几个重要的概念。
 
 - `Scheduler`：与调度程序交互的主要api
@@ -13,7 +20,7 @@ quartz有几个重要的概念。
 
 - `TriggerBuilder`：用于定义/构建触发器的实例
 
-## 与springboot2.x集成
+## 与springboot2.x集成（单机版）
 
 1.添加maven依赖
 
@@ -230,7 +237,7 @@ public class AppReadListener implements ApplicationListener<ApplicationReadyEven
 }
 ```
 
-##测试
+## 测试
 
 1.执行`init.sql`，初始化数据结构。
 

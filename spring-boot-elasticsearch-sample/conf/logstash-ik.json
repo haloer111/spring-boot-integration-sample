@@ -1,0 +1,31 @@
+{
+    "index_patterns": ["*"],
+  "order" : 1,
+  "version": 1,
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas":0
+  },
+    "mappings": {
+      "date_detection": true,
+      "numeric_detection": true,
+            "dynamic_templates": [
+                {
+                    "string_fields": {
+                        "match": "*",
+                        "match_mapping_type": "string",
+                        "mapping": {
+                            "type": "text",
+                            "norms": false,
+                            "analyzer": "ik_max_word",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+    }
+}

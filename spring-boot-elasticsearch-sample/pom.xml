@@ -7,10 +7,11 @@
         <artifactId>spring-boot-integration-sample</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>spring-boot-quartz-sample</artifactId>
-
-    <name>spring-boot-quartz-sample</name>
-    <description>Demo project for Spring Boot</description>
+    <groupId>com.gexiao</groupId>
+    <artifactId>spring-boot-elasticsearch-sample</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-elasticsearch-sample</name>
+    <description>springboot与elasticsearch的整合</description>
 
     <properties>
         <java.version>11</java.version>
@@ -18,18 +19,29 @@
     </properties>
 
     <dependencies>
-        <!--Quartz-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
         <!--使用mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-
+        <!--elasticsearch client-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <!--elasticsearch-->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.68</version>
+        </dependency>
     </dependencies>
 
     <build>

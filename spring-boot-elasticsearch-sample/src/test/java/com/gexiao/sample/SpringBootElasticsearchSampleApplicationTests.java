@@ -154,13 +154,13 @@ public class SpringBootElasticsearchSampleApplicationTests {
      */
     @Test
     public void selectDoc() {
+        // SearchSourceBuilder
+        SearchSourceBuilder builder = new SearchSourceBuilder();
         // index名称
         SearchRequest request = new SearchRequest("stu");
         // dsl构建
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         boolQueryBuilder.must(QueryBuilders.matchQuery("name", "方大同"));
-        // SearchSourceBuilder
-        SearchSourceBuilder builder = new SearchSourceBuilder();
         // sort排序
         SortBuilder sortBuilder = new FieldSortBuilder("id");
         sortBuilder.order(SortOrder.ASC);

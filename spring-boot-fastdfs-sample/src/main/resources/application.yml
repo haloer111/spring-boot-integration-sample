@@ -1,0 +1,7 @@
+# fastDFS
+fdfs:
+  connect-timeout: 30 # 连接超时时间
+  tracker-list:
+    - 192.168.2.56:22122
+server:
+  port: 8089

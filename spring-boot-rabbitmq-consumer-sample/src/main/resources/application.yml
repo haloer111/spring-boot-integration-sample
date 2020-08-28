@@ -1,0 +1,24 @@
+spring:
+  rabbitmq:
+    addresses: 192.168.2.93:5672
+    username: root
+    password: 123456
+    virtual-host: /gexiao
+    connection-timeout: 1500
+    listener:
+      simple:
+        concurrency: 1
+        max-concurrency: 5
+        # 手动确认
+        acknowledge-mode: manual
+      # 参数配置的方式，指定监听队列信息
+      order:
+        queue:
+          name: queue-2
+          durable: true
+        exchange:
+          name: exchange-2
+          type: topic
+          ignoreDeclarationExceptions: true
+        key: springboot2.*
+

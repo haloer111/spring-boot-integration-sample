@@ -1,0 +1,20 @@
+regCenter:
+  serverList: 192.168.2.55:2181
+  namespace: springboot2_elasticjob
+
+elastic:
+  job:
+    cron: "0/5 * * * * ?"
+    # 作业分片总数
+    shardingTotalCount: 3
+    # 分片序列号和参数用等号分隔，多个键值对用逗号分隔
+    shardingItemParameters: "0=A1,1=B1,2=C1"
+    # 作业自定义参数
+    jobParameters: "parameter"
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.2.170:3306/elastic_job?serverTimezone=GMT%2B8&useSSL=false&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root

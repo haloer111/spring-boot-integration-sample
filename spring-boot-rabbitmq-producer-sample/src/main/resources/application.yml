@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    addresses: 192.168.2.93:5672
+    username: root
+    password: 123456
+    virtual-host: /gexiao
+    connection-timeout: 1500
+    publisher-returns: true
+    # 开启确认回调
+    publisher-confirm-type: correlated
+    template:
+      # 当消息不可达时，由用户自定义处理，而不是直接删除消息
+      mandatory: true
